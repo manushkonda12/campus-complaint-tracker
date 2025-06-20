@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Complaint Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Submit a Complaint</h2>
+    <form action="/" method="POST">
+        <label>Name:</label><input type="text" name="name" required><br>
+        <label>Roll No:</label><input type="text" name="roll" required><br>
+        <label>Category:</label>
+        <select name="category" required>
+            <option value="Hostel">Hostel</option>
+            <option value="Classroom">Classroom</option>
+            <option value="Lab">Lab</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <label>Description:</label><br>
+        <textarea name="description" rows="4" cols="40" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="/complaints">View All Complaints (Admin)</a>
+</body>
+</html>
